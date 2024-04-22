@@ -172,4 +172,148 @@ Honorine@Tuyishime-PC MINGW64 ~/GitBundle1 (dev)
 $ git push origin --delete test
 To github.com:tuyishimehono/GitBundle1.git
  - [deleted]         test
+```
 
+### Exercise 2
+
+```bash
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ touch home.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ code home.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ git add home.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ git stash
+Saved working directory and index state WIP on dev: 4e28d4b Add index.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ touch about.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ code about.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ git add about.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ git stash
+Saved working directory and index state WIP on dev: 4e28d4b Add index.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ touch team.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ code team.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ git add team.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ git stash
+Saved working directory and index state WIP on dev: 4e28d4b Add index.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ git stash list
+stash@{0}: WIP on dev: 4e28d4b Add index.html
+stash@{1}: WIP on dev: 4e28d4b Add index.html
+stash@{2}: WIP on dev: 4e28d4b Add index.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ git stash list
+stash@{0}: WIP on dev: 4e28d4b Add index.html
+stash@{1}: WIP on dev: 4e28d4b Add index.html
+stash@{2}: WIP on dev: 4e28d4b Add index.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ git stash pop stash@{1}
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+
+Dropped stash@{1} (bbeb41b58a3c17bd49b26a257fe39af507e1fb10)
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ git stash list
+stash@{0}: WIP on dev: 4e28d4b Add index.html
+stash@{1}: WIP on dev: 4e28d4b Add index.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ git stash pop stash@{1}
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   home.html
+
+Dropped stash@{1} (d668b36b09909afa970dca2da1a103948a7eb99b)
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ git stash list
+stash@{0}: WIP on dev: 4e28d4b Add index.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ git commit -m "Adding home and about pages"
+[dev e8054b7] Adding home and about pages
+ 2 files changed, 33 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ ls
+about.html  home.html  index.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ git stash pop stash@{0}
+On branch dev
+Your branch is ahead of 'origin/dev' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
+Dropped stash@{0} (01e83c011fac298e9d2f66b0436f8c8d5daeb8a7)
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ git log --oneline
+d7fd906 (HEAD -> dev) Adding home and about pages
+e8054b7 Adding home and about pages
+4e28d4b (origin/dev, origin/Main, Main) Add index.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ git reset d7fd906
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ git log --oneline
+d7fd906 (HEAD -> dev) Adding home and about pages
+e8054b7 Adding home and about pages
+4e28d4b (origin/dev, origin/Main, Main) Add index.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ git status
+On branch dev
+Your branch is ahead of 'origin/dev' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        team.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+## Bundle 2
+
+### Exercise 1
+
+``` bash
