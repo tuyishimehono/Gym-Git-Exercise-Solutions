@@ -419,4 +419,240 @@ branch 'ft/bundles-2' set up to track 'origin/ft/bundles-2'.
 
 ```bash
 
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/bundles-2)
+$ git checkout main
+Switched to branch 'main'
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (main)
+$ git pull
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 916 bytes | 229.00 KiB/s, done.
+From github.com:tuyishimehono/GitBundle1
+   4e28d4b..3baa726  Main       -> origin/Main
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> main
+
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (main)
+$ git checkout -b ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/service-redesign)
+$ git add services.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/service-redesign)
+$ git commit -m "Updating services"
+[ft/service-redesign 787d4dc] Updating services
+ 1 file changed, 12 insertions(+)
+ create mode 100644 services.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/service-redesign)
+$ git push
+fatal: The current branch ft/service-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/service-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/service-redesign)
+$ git push --set-upstream origin ft/service-redesign
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 470 bytes | 235.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/tuyishimehono/GitBundle1/pull/new/ft/service-redesign
+remote:
+To github.com:tuyishimehono/GitBundle1.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (main)
+$ git add services.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (main)
+$ git commit -m "Updating services again"
+[main 13423a6] Updating services again
+ 1 file changed, 12 insertions(+)
+ create mode 100644 services.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (main)
+$ git push --set-upstream origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 478 bytes | 478.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'main' on GitHub by visiting:
+remote:      https://github.com/tuyishimehono/GitBundle1/pull/new/main
+remote:
+To github.com:tuyishimehono/GitBundle1.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/service-redesign)
+$ git diff main ft/service-redesign
+diff --git a/services.html b/services.html
+index 615bc76..8cbcac4 100644
+--- a/services.html
++++ b/services.html
+@@ -7,6 +7,6 @@
+ </head>
+ <body>
+     <h1>These are Services</h1>
+-    <p>Another new service</p>
++    <p>A new service</p>
+ </body>
+ </html>
+\ No newline at end of file
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/service-redesign)
+$ git merge main
+Auto-merging services.html
+CONFLICT (add/add): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/service-redesign|MERGING)
+$ git add services.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/service-redesign|MERGING)
+$ git push
+Everything up-to-date
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/service-redesign|MERGING)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (main)
+$ git add services.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (main)
+$ git push
+Everything up-to-date
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/service-redesign)
+$ git merge main
+Auto-merging services.html
+CONFLICT (add/add): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/service-redesign|MERGING)
+$ git add services.html
+
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/service-redesign|MERGING)
+$ git push
+Everything up-to-date
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/service-redesign|MERGING)
+$ git checkout ft/service-redesign
+Already on 'ft/service-redesign'
+M       services.html
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/service-redesign)
+$ git merge main
+error: Your local changes to the following files would be overwritten by merge:
+  services.html
+Merge with strategy ort failed.
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/service-redesign)
+$ git add services.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   services.html
+
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/service-redesign)
+$ git commit -m "modified services"
+[ft/service-redesign c5a69a2] modified services
+ 1 file changed, 1 deletion(-)
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+Your branch is ahead of 'origin/ft/service-redesign' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/service-redesign)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 325 bytes | 325.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:tuyishimehono/GitBundle1.git
+   787d4dc..c5a69a2  ft/service-redesign -> ft/service-redesign
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/service-redesign)
+$ git merge main
+Auto-merging services.html
+CONFLICT (add/add): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/service-redesign|MERGING)
+$ git add services.html
+
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/service-redesign|MERGING)
+$ git commit -m "modified services"
+[ft/service-redesign 6f0cd0f] modified services
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/service-redesign)
+$ git merge main
+Already up to date.
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/service-redesign)
+$ git push
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 218 bytes | 109.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:tuyishimehono/GitBundle1.git
+   c5a69a2..6f0cd0f  ft/service-redesign -> ft/service-redesign
+
 
