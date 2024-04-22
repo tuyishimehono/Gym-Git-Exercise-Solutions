@@ -365,3 +365,58 @@ Changes to be committed:
 ### Exercise 1
 
 ``` bash
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ git checkout -b ft/bundles-2
+Switched to a new branch 'ft/bundles-2'
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/bundles-2)
+$ touch services.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/bundles-2)
+$ code services.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/bundles-2)
+$ git add services.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/bundles-2)
+$ git commit -m "Add services page"
+[ft/bundles-2 7305714] Add services page
+ 2 files changed, 22 insertions(+)
+ create mode 100644 services.html
+ create mode 100644 team.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/bundles-2)
+$ git push
+fatal: The current branch ft/bundles-2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/bundles-2
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/bundles-2)
+$ git push --set-upstream origin ft/bundles-2
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 583 bytes | 583.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+remote:
+remote: Create a pull request for 'ft/bundles-2' on GitHub by visiting:
+remote:      https://github.com/tuyishimehono/GitBundle1/pull/new/ft/bundles-2
+remote:
+To github.com:tuyishimehono/GitBundle1.git
+ * [new branch]      ft/bundles-2 -> ft/bundles-2
+branch 'ft/bundles-2' set up to track 'origin/ft/bundles-2'.
+
+```
+### Exercise 2
+
+```bash
+
+
