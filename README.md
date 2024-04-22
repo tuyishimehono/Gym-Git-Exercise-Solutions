@@ -655,4 +655,187 @@ Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
 To github.com:tuyishimehono/GitBundle1.git
    c5a69a2..6f0cd0f  ft/service-redesign -> ft/service-redesign
 
+```
+
+## Bundle 3
+
+### Exercise 1
+
+``` bash
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (main)
+$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/team-page)
+$ touch team.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/team-page)
+$ code team.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/team-page)
+$ git add team.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/team-page)
+$ git commit -m "Adding team page"
+[ft/team-page 0f3a3f9] Adding team page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 team.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/team-page)
+$ git push --set-upstream origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 486 bytes | 486.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/tuyishimehono/GitBundle1/pull/new/ft/team-page
+remote:
+To github.com:tuyishimehono/GitBundle1.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/team-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (main)
+$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/contact-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/team-page)
+$ git log
+commit 0f3a3f9f489493bdbf536eff5ce5c4034fd8f4dd (HEAD -> ft/team-page, origin/ft/team-page)
+Author: tuyishimehono <tuhonori1@gmail.com>
+Date:   Mon Apr 22 16:20:04 2024 +0200
+
+    Adding team page
+
+commit 13423a6a05d82af1e9aa96c5534032add16f8c8d (origin/main, main, ft/contact-page)
+Author: tuyishimehono <tuhonori1@gmail.com>
+Date:   Mon Apr 22 15:27:56 2024 +0200
+
+    Updating services again
+
+commit 4e28d4b660efefe7f35d2dc3bc3f7a75b9e4a223
+Author: tuyishimehono <tuhonori1@gmail.com>
+Date:   Mon Apr 22 12:07:22 2024 +0200
+
+    Add index.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/contact-page)
+$ git cherry-pick 0f3a3f9f489493bdbf536eff5ce5c4034fd8f4dd
+[ft/contact-page 8716111] Adding team page
+ Date: Mon Apr 22 16:20:04 2024 +0200
+ 1 file changed, 11 insertions(+)
+ create mode 100644 team.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/contact-page)
+$ git add contact.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/contact-page)
+$ git commit -m "Adding Contact page"
+[ft/contact-page b16d056] Adding Contact page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 contact.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/contact-page)
+$ git push --set-upstream origin ft/contact-page
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 755 bytes | 755.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/tuyishimehono/GitBundle1/pull/new/ft/contact-page
+remote:
+To github.com:tuyishimehono/GitBundle1.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/contact-page)
+$ git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/faq-page)
+$ git add faq.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/faq-page)
+$ git commit -m "Adding a FAQ page"
+[ft/faq-page e4df0b7] Adding a FAQ page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 faq.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/faq-page)
+$ git push --set-upstream origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 463 bytes | 463.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/tuyishimehono/GitBundle1/pull/new/ft/faq-page
+remote:
+To github.com:tuyishimehono/GitBundle1.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/faq-page)
+$ git revert 0f3a3f9f489493bdbf536eff5ce5c4034fd8f4dd
+[ft/faq-page b3f2087] Revert "Adding team page"
+ 1 file changed, 11 deletions(-)
+ delete mode 100644 team.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/faq-page)
+$ git add .
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/faq-page)
+$ git status
+On branch ft/faq-page
+Your branch is ahead of 'origin/ft/faq-page' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/faq-page)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 275 bytes | 275.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:tuyishimehono/GitBundle1.git
+   e4df0b7..b3f2087  ft/faq-page -> ft/faq-page
+
+```
+
+### Exercise 2
+
+```bash
 
