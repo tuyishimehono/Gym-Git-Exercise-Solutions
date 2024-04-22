@@ -838,4 +838,72 @@ To github.com:tuyishimehono/GitBundle1.git
 ### Exercise 2
 
 ```bash
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/faq-page)
+$ git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (main)
+$ ls
+index.html  services.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (main)
+$ git add index.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (main)
+$ git commit -m "Modified index.html"
+[main 778f971] Modified index.html
+ 1 file changed, 1 insertion(+)
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 368 bytes | 368.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:tuyishimehono/GitBundle1.git
+   13423a6..778f971  main -> main
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (main)
+$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/home-page-redesign)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/home-page-redesign)
+$ git add home.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/home-page-redesign)
+$ git commit -m "Modifying Home page"
+[ft/home-page-redesign f9f6f0e] Modifying Home page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 home.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/home-page-redesign)
+$ git push --set-upstream origin ft/home-page-redesign
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (14/14), 1.52 KiB | 778.00 KiB/s, done.
+Total 14 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (7/7), done.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/tuyishimehono/GitBundle1/pull/new/ft/home-page-redesign
+remote:
+To github.com:tuyishimehono/GitBundle1.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+
+```
 
