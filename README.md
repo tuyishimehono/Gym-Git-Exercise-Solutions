@@ -310,6 +310,54 @@ Untracked files:
         team.html
 
 nothing added to commit but untracked files present (use "git add" to track)
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ git push
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 803 bytes | 803.00 KiB/s, done.
+Total 7 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), done.
+To github.com:tuyishimehono/GitBundle1.git
+   4e28d4b..d7fd906  dev -> dev
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ git reset --hard
+HEAD is now at d7fd906 Adding home and about pages
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ git status
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        team.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ git add -all
+error: did you mean `--all` (with two dashes)?
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ git add --all
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ git push
+Everything up-to-date
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (dev)
+$ git status
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
 ```
 
 ## Bundle 2
