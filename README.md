@@ -959,5 +959,107 @@ To github.com:tuyishimehono/git-exercise-clone.git
  * [new branch]      main -> main
 
 ```
+### Exercise 2
+
+```bash
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (main)
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/footer)
+$ git add footer.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/footer)
+$ git commit -m "Adding footer page"
+[ft/footer 992644b] Adding footer page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 footer.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/footer)
+$ git add footer.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/footer)
+$ git commit -m "Modified footer"
+[ft/footer bb30872] Modified footer
+ 1 file changed, 1 insertion(+)
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/footer)
+$ git push --set-upstream origin ft/footer
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 1.09 KiB | 1.09 MiB/s, done.
+Total 9 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/tuyishimehono/GitBundle1/pull/new/ft/footer
+remote:
+To github.com:tuyishimehono/GitBundle1.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/footer)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (main)
+$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/squashing)
+$ git merge --squash ft/footer
+Updating 5b423f4..bb30872
+Fast-forward
+Squash commit -- not updating HEAD
+ footer.html | 12 ++++++++++++
+ home.html   |  2 ++
+ 2 files changed, 14 insertions(+)
+ create mode 100644 footer.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/squashing)
+$ git commit -m "Squashed commit from ft/footing"
+[ft/squashing 0f78f74] Squashed commit from ft/footing
+ 2 files changed, 14 insertions(+)
+ create mode 100644 footer.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/squashing)
+$ git push --set-upstream origin ft/squashing
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 607 bytes | 607.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/tuyishimehono/GitBundle1/pull/new/ft/squashing
+remote:
+To github.com:tuyishimehono/GitBundle1.git
+ * [new branch]      ft/squashing -> ft/squashing
+branch 'ft/squashing' set up to track 'origin/ft/squashing'.
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/squashing)
+$ git merge main
+Already up to date.
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/squashing)
+$ git checkout ft/footing
+error: pathspec 'ft/footing' did not match any file(s) known to git
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/squashing)
+$ git checkout ft/footer
+Switched to branch 'ft/footer'
+Your branch is up to date with 'origin/ft/footer'.
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/footer)
+$ git merge main
+Already up to date.
+
+```
 
 
