@@ -1152,5 +1152,56 @@ branch 'ft/menu' set up to track 'origin/ft/menu'.
 
 ```
 
+### Exercise 2
+
+``` bash
+
+Honorine@Tuyishime-PC MINGW64 ~/git-cafe-exercise (main)
+$ git checkout -b ft/bug-fix
+Switched to a new branch 'ft/bug-fix'
+
+Honorine@Tuyishime-PC MINGW64 ~/git-cafe-exercise (ft/bug-fix)
+$ git add index-4.html
+
+Honorine@Tuyishime-PC MINGW64 ~/git-cafe-exercise (ft/bug-fix)
+$ git add contact.html
+
+Honorine@Tuyishime-PC MINGW64 ~/git-cafe-exercise (ft/bug-fix)
+$ git status
+On branch ft/bug-fix
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    index-4.html -> contact.html
+
+
+Honorine@Tuyishime-PC MINGW64 ~/git-cafe-exercise (ft/bug-fix)
+$ git commit -m "Renamed index-4.html"
+[ft/bug-fix 384788d] Renamed index-4.html
+ 1 file changed, 203 insertions(+), 203 deletions(-)
+ rename index-4.html => contact.html (97%)
+
+Honorine@Tuyishime-PC MINGW64 ~/git-cafe-exercise (ft/bug-fix)
+$ git push --set-upstream origin ft/bug-fix
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 2.49 KiB | 2.49 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/bug-fix' on GitHub by visiting:
+remote:      https://github.com/tuyishimehono/git-cafe-exercise/pull/new/ft/bug-fix
+remote:
+To github.com:tuyishimehono/git-cafe-exercise.git
+ * [new branch]      ft/bug-fix -> ft/bug-fix
+branch 'ft/bug-fix' set up to track 'origin/ft/bug-fix'.
+
+```
+
+### Exercise 3
+
+```bash
+
 
 
