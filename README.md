@@ -907,3 +907,57 @@ branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 
 ```
 
+## Bundle 4
+
+### Exercise 1
+
+```bash
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (ft/bundles-2)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (main)
+$ git remote add git-copy git@github.com:tuyishimehono/git-exercise-clone.git
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (main)
+$ git remote
+git-copy
+origin
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (main)
+$ git add home.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (main)
+$ git commit -m "Modified Home page"
+[main 5b423f4] Modified Home page
+ 1 file changed, 12 insertions(+)
+ create mode 100644 home.html
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (main)
+$ git push origin
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 508 bytes | 508.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:tuyishimehono/GitBundle1.git
+   778f971..5b423f4  main -> main
+
+Honorine@Tuyishime-PC MINGW64 ~/gitBundle1 (main)
+$ git push git-copy
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (12/12), 1.37 KiB | 1.37 MiB/s, done.
+Total 12 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), done.
+To github.com:tuyishimehono/git-exercise-clone.git
+ * [new branch]      main -> main
+
+```
+
+
